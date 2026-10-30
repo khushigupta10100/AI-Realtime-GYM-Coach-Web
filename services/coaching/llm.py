@@ -1,3 +1,4 @@
+
 from services.config.workout_config import PROMPT
 
 
@@ -19,14 +20,31 @@ class LLMCoach:
             {"role": "user", "content": prompt}
         ]
 
-        response = self.client.chat.completions.create(
-            model="llama-3.3-70b-versatile",
-            messages=messages,
-            temperature=0.4,
-        )
+        try:
+            response = self.client.chat.completions.create(
+                model="openai/gpt-oss-120b",
+                messages=messages,
+                temperature=0.4,
+            )
 
-        text = response.choices[0].message.content.strip()
-        self.history.append({"role": "assistant", "content": text})
+            text = response.choices[0].message.content
 
-        return text
-    
+            if not text:
+                return "Keep going at a comfortable pace."
+
+            text = text.strip()
+
+            # Save conversation history
+            self.history.extend([
+                {"role": "user", "content": prompt},
+                {"role": "assistant", "content": text}
+            ])
+
+            # Keep only recent conversation messages
+            self.history = self.history[-10:]
+
+            return text
+
+        except Exception as e:
+            print(f"Groq API error: {e}")
+            return "Stay comfortable and focus on your form."
