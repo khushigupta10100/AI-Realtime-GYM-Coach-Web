@@ -1,0 +1,205 @@
+<div class="gc-home" id="top">
+  <nav class="gc-nav">
+    <div class="gc-wrap gc-nav-inner">
+      <a class="gc-brand" href="#top" aria-label="AI Real-Time Gym Coach home">
+        <span class="gc-logo" aria-hidden="true">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
+            <path d="M7 9V7a5 5 0 0 1 10 0v2" stroke="#041016" stroke-width="2"/>
+            <rect x="4" y="9" width="16" height="11" rx="3" stroke="#041016" stroke-width="2"/>
+            <circle cx="12" cy="14.5" r="2" fill="#041016"/>
+          </svg>
+        </span>
+        <span class="gc-logo-name">
+          AI Real-Time Gym Coach
+          <span>V2 · Pose-guided training</span>
+        </span>
+      </a>
+      <input class="gc-nav-toggle" type="checkbox" aria-label="Open navigation"/>
+      <div class="gc-nav-links">
+        <a href="#top">Home</a>
+        <a href="#features">Features</a>
+        <a href="#how-it-works">How It Works</a>
+        <a class="gc-btn gc-btn-primary" href="?enter=login">Login</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="gc-hero">
+    <div class="gc-wrap gc-hero-grid">
+      <div>
+        <div class="gc-kicker">Real-time vision coaching</div>
+        <p class="gc-h1">Your Personal AI Gym Coach – <em>Train Smarter, Not Harder.</em></p>
+        <p>
+          Experience intelligent fitness training with real-time AI-powered exercise monitoring,
+          posture analysis, repetition counting, and workout assistance.
+        </p>
+        <div class="gc-hero-actions">
+          <a class="gc-btn gc-btn-primary" href="?enter=login">Get Started / Login</a>
+          <a class="gc-btn gc-btn-ghost" href="#features">Explore Features</a>
+        </div>
+      </div>
+      <div class="gc-visual" aria-hidden="true">
+        <svg viewBox="0 0 560 390" role="img">
+          <defs>
+            <linearGradient id="gcGlow" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#22d3ee"/>
+              <stop offset="50%" stop-color="#818cf8"/>
+              <stop offset="100%" stop-color="#a3e635"/>
+            </linearGradient>
+          </defs>
+          <rect x="24" y="22" width="512" height="346" rx="28" fill="#0b1220" stroke="rgba(148,163,184,0.2)"/>
+          <text x="48" y="56" fill="#67e8f9" font-size="13" font-family="Outfit, sans-serif">WEBCAM · POSE TRACKING</text>
+          <text x="400" y="56" fill="#a3e635" font-size="12" font-family="Outfit, sans-serif">LIVE</text>
+          <circle cx="278" cy="108" r="18" fill="none" stroke="url(#gcGlow)" stroke-width="3"/>
+          <line x1="278" y1="126" x2="278" y2="188" stroke="url(#gcGlow)" stroke-width="4"/>
+          <line x1="278" y1="148" x2="228" y2="176" stroke="url(#gcGlow)" stroke-width="4"/>
+          <line x1="278" y1="148" x2="332" y2="176" stroke="url(#gcGlow)" stroke-width="4"/>
+          <line x1="278" y1="188" x2="236" y2="262" stroke="url(#gcGlow)" stroke-width="4"/>
+          <line x1="278" y1="188" x2="324" y2="262" stroke="url(#gcGlow)" stroke-width="4"/>
+          <circle cx="278" cy="108" r="5" fill="#22d3ee"/>
+          <circle cx="228" cy="176" r="5" fill="#a78bfa"/>
+          <circle cx="332" cy="176" r="5" fill="#a78bfa"/>
+          <circle cx="278" cy="188" r="5" fill="#38bdf8"/>
+          <circle cx="236" cy="262" r="5" fill="#a3e635"/>
+          <circle cx="324" cy="262" r="5" fill="#a3e635"/>
+          <rect x="48" y="300" width="160" height="8" rx="4" fill="#1e293b"/>
+          <rect x="48" y="300" width="110" height="8" rx="4" fill="#22d3ee"/>
+        </svg>
+        <div class="gc-hud">
+          <span>Exercise<b>Squats</b></span>
+          <span>Reps tracked<b>Live count</b></span>
+          <span>Form cues<b>Angle metrics</b></span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="gc-section" id="how-it-works">
+    <div class="gc-wrap">
+      <div class="gc-section-head">
+        <div class="gc-kicker">User journey</div>
+        <p class="gc-h2">How It Works</p>
+        <p>
+          A conceptual walkthrough of the coaching session flow: from opening the app
+          to pose analysis, rep counting, feedback, and saved workout progress.
+        </p>
+      </div>
+      <div class="gc-flow">
+        <div class="gc-flow-col stage-access">
+          <p class="gc-h3">1. Access</p>
+          <div class="gc-node"><strong>START</strong><small>Begin the coaching journey</small></div>
+          <div class="gc-node-arrow">↓</div>
+          <div class="gc-node"><strong>Open AI Real-Time Gym Coach</strong><small>Launch the application</small></div>
+          <div class="gc-node-arrow">↓</div>
+          <div class="gc-node"><strong>User Login / Authentication</strong><small>Enter a unique username</small></div>
+          <div class="gc-node-arrow">↓</div>
+          <div class="gc-node"><strong>Access Gym Coach Dashboard</strong><small>Open the workout workspace</small></div>
+        </div>
+        <div class="gc-flow-col stage-capture">
+          <p class="gc-h3">2. Capture</p>
+          <div class="gc-node"><strong>Select Exercise</strong><small>Choose from supported movements</small></div>
+          <div class="gc-node-arrow">↓</div>
+          <div class="gc-node"><strong>Enable Webcam / Camera</strong><small>Start the live video session</small></div>
+          <div class="gc-node-arrow">↓</div>
+          <div class="gc-node"><strong>Real-Time Video Processing</strong><small>Frames are analyzed continuously</small></div>
+        </div>
+        <div class="gc-flow-col stage-analyze">
+          <p class="gc-h3">3. AI analysis</p>
+          <div class="gc-node"><strong>AI Pose Detection</strong><small>Estimate body pose from video</small></div>
+          <div class="gc-node-arrow">↓</div>
+          <div class="gc-node"><strong>Body Landmark Detection</strong><small>Track joints and skeleton points</small></div>
+          <div class="gc-node-arrow">↓</div>
+          <div class="gc-node"><strong>Posture / Exercise Analysis</strong><small>Measure angles and form cues</small></div>
+          <div class="gc-node-arrow">↓</div>
+          <div class="gc-node"><strong>Repetition Counting</strong><small>Count completed reps automatically</small></div>
+        </div>
+        <div class="gc-flow-col stage-result">
+          <p class="gc-h3">4. Results</p>
+          <div class="gc-node"><strong>Real-Time Feedback</strong><small>On-screen metrics and coach cues</small></div>
+          <div class="gc-node-arrow">↓</div>
+          <div class="gc-node"><strong>Workout Progress / Results</strong><small>Review session history after training</small></div>
+          <div class="gc-node-arrow">↓</div>
+          <div class="gc-node"><strong>END</strong><small>Session complete</small></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="gc-section" id="features">
+    <div class="gc-wrap">
+      <div class="gc-section-head">
+        <div class="gc-kicker">Capabilities</div>
+        <p class="gc-h2">Features</p>
+        <p>Built around the coaching tools already available in this application.</p>
+      </div>
+      <div class="gc-features">
+        <article class="gc-card">
+          <div class="gc-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="5" r="2.2" stroke="#22d3ee" stroke-width="1.8"/><path d="M12 8v5M8 11h8M9 21l3-8 3 8" stroke="#22d3ee" stroke-width="1.8" stroke-linecap="round"/></svg>
+          </div>
+          <p class="gc-h3">AI Pose Detection</p>
+          <p>Uses on-device pose estimation to identify body position while you train in front of the camera.</p>
+        </article>
+        <article class="gc-card">
+          <div class="gc-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><rect x="3" y="6" width="18" height="12" rx="2" stroke="#a78bfa" stroke-width="1.8"/><circle cx="12" cy="12" r="3" stroke="#a78bfa" stroke-width="1.8"/></svg>
+          </div>
+          <p class="gc-h3">Real-Time Exercise Monitoring</p>
+          <p>Streams your webcam into the coach so movement can be observed as the set happens.</p>
+        </article>
+        <article class="gc-card">
+          <div class="gc-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M4 16h4l3-8 3 12 3-6h3" stroke="#a3e635" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <p class="gc-h3">Automatic Repetition Counting</p>
+          <p>Counts reps from movement stages for supported exercises such as squats, push-ups, curls, presses, and lunges.</p>
+        </article>
+        <article class="gc-card">
+          <div class="gc-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M4 20 12 4l8 16" stroke="#38bdf8" stroke-width="1.8" stroke-linecap="round"/><path d="M8 14h8" stroke="#38bdf8" stroke-width="1.8"/></svg>
+          </div>
+          <p class="gc-h3">Posture Analysis</p>
+          <p>Tracks exercise-specific cues such as joint angles, depth, alignment, and stability indicators.</p>
+        </article>
+        <article class="gc-card">
+          <div class="gc-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M5 12h6l2-3 2 6 2-3h2" stroke="#f472b6" stroke-width="1.8" stroke-linecap="round"/><circle cx="18" cy="7" r="2" stroke="#f472b6" stroke-width="1.8"/></svg>
+          </div>
+          <p class="gc-h3">Instant Workout Feedback</p>
+          <p>Shows live metrics during a session and can deliver coach messages through the existing voice coaching pipeline.</p>
+        </article>
+        <article class="gc-card">
+          <div class="gc-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M5 19V9M10 19V5M15 19v-7M20 19V8" stroke="#22d3ee" stroke-width="1.8" stroke-linecap="round"/></svg>
+          </div>
+          <p class="gc-h3">Workout Progress Tracking</p>
+          <p>Stores completed exercise data and displays workout history on the coach dashboard.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="gc-section">
+    <div class="gc-wrap">
+      <div class="gc-cta">
+        <p class="gc-h2">Ready to Transform Your Workout Experience?</p>
+        <p>Start your smart fitness journey with AI-powered real-time gym coaching.</p>
+        <a class="gc-btn gc-btn-primary" href="?enter=login">Login / Get Started</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="gc-wrap gc-footer">
+    <div>
+      <strong>AI Real-Time Gym Coach V2</strong>
+      Real-time pose detection, form cues, rep counting, and workout history for supported gym exercises.
+      <br/>© 2026 AI Real-Time Gym Coach V2. All rights reserved.
+    </div>
+    <div class="gc-footer-links">
+      <a href="#top">Home</a>
+      <a href="#features">Features</a>
+      <a href="#how-it-works">How It Works</a>
+      <a href="?enter=login">Login</a>
+    </div>
+  </footer>
+</div>

@@ -1,0 +1,519 @@
+/* Isolated landing-page styles. Does not replace static/Style.css. */
+
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Source+Sans+3:wght@400;500;600&display=swap");
+
+header[data-testid="stHeader"],
+[data-testid="stHeader"],
+[data-testid="stToolbar"],
+[data-testid="stDecoration"],
+[data-testid="stStatusWidget"],
+.stDeployButton,
+[data-testid="stAppDeployButton"],
+#MainMenu {
+  display: none !important;
+  height: 0 !important;
+  visibility: hidden !important;
+}
+
+.stApp {
+  background:
+    radial-gradient(1200px 600px at 12% -10%, rgba(56, 189, 248, 0.16), transparent 55%),
+    radial-gradient(900px 500px at 100% 8%, rgba(168, 85, 247, 0.14), transparent 50%),
+    radial-gradient(800px 500px at 80% 90%, rgba(163, 230, 53, 0.08), transparent 55%),
+    #07090f !important;
+  color: #eef2ff;
+}
+
+.stApp header,
+.stApp [data-testid="stHeader"] {
+  background: transparent !important;
+}
+
+[data-testid="stSidebar"],
+[data-testid="collapsedControl"],
+footer {
+  display: none !important;
+}
+
+.block-container {
+  max-width: 100% !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+[data-testid="stHeaderActionElements"],
+.stMarkdown h1 a,
+.stMarkdown h2 a,
+.stMarkdown h3 a {
+  display: none !important;
+}
+
+[data-testid="stBottomBlockContainer"] {
+  padding: 0 !important;
+}
+
+.gc-home {
+  font-family: "Source Sans 3", "Segoe UI", sans-serif;
+  color: #e8eefc;
+  line-height: 1.55;
+}
+
+.gc-home * {
+  box-sizing: border-box;
+}
+
+.gc-home .gc-h1,
+.gc-home .gc-h2,
+.gc-home .gc-h3,
+.gc-home .gc-logo-name,
+.gc-home .gc-btn {
+  font-family: Outfit, "Segoe UI", sans-serif;
+}
+
+.gc-wrap {
+  width: min(1120px, calc(100% - 2rem));
+  margin: 0 auto;
+}
+
+.gc-nav {
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  backdrop-filter: blur(16px);
+  background: rgba(7, 9, 15, 0.78);
+  border-bottom: 1px solid rgba(148, 163, 184, 0.12);
+}
+
+.gc-nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  min-height: 72px;
+}
+
+.gc-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  color: inherit;
+}
+
+.gc-logo {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(145deg, #22d3ee, #6366f1 55%, #a3e635);
+  box-shadow: 0 0 24px rgba(34, 211, 238, 0.28);
+}
+
+.gc-logo-name {
+  font-weight: 700;
+  font-size: 0.98rem;
+  letter-spacing: 0.01em;
+}
+
+.gc-logo-name span {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: #94a3b8;
+}
+
+.gc-nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1.4rem;
+}
+
+.gc-nav-links a {
+  color: #cbd5e1;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.gc-nav-links a:hover {
+  color: #22d3ee;
+}
+
+.gc-nav-toggle {
+  display: none;
+}
+
+.gc-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  border-radius: 999px;
+  padding: 0.78rem 1.3rem;
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.gc-btn:hover {
+  transform: translateY(-2px);
+}
+
+.gc-btn-primary {
+  color: #041016;
+  background: linear-gradient(135deg, #22d3ee, #38bdf8 40%, #a3e635);
+  box-shadow: 0 10px 30px rgba(34, 211, 238, 0.22);
+}
+
+.gc-btn-ghost {
+  color: #e2e8f0;
+  background: rgba(15, 23, 42, 0.6);
+  border: 1px solid rgba(148, 163, 184, 0.22);
+}
+
+.gc-hero {
+  padding: 4.2rem 0 3.2rem;
+}
+
+.gc-hero-grid {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 2.4rem;
+  align-items: center;
+}
+
+.gc-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 0.75rem;
+  border-radius: 999px;
+  background: rgba(34, 211, 238, 0.1);
+  color: #67e8f9;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.gc-hero .gc-h1 {
+  margin: 1rem 0 0.9rem;
+  font-size: clamp(2.1rem, 4.4vw, 3.6rem);
+  line-height: 1.08;
+  font-weight: 800;
+}
+
+.gc-hero .gc-h1 em {
+  font-style: normal;
+  background: linear-gradient(90deg, #22d3ee, #a78bfa, #a3e635);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.gc-hero p {
+  max-width: 38rem;
+  color: #b6c3d9;
+  font-size: 1.08rem;
+}
+
+.gc-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-top: 1.6rem;
+}
+
+.gc-visual {
+  position: relative;
+  border-radius: 28px;
+  overflow: hidden;
+  min-height: 390px;
+  background:
+    linear-gradient(180deg, rgba(15, 23, 42, 0.2), rgba(2, 6, 23, 0.55)),
+    radial-gradient(circle at 50% 20%, rgba(56, 189, 248, 0.18), transparent 40%);
+  border: 1px solid rgba(148, 163, 184, 0.16);
+  box-shadow: 0 24px 80px rgba(2, 6, 23, 0.45);
+}
+
+.gc-visual svg {
+  width: 100%;
+  height: 390px;
+  display: block;
+}
+
+.gc-hud {
+  position: absolute;
+  left: 1rem;
+  right: 1rem;
+  bottom: 1rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.6rem;
+}
+
+.gc-hud span {
+  background: rgba(7, 10, 18, 0.78);
+  border: 1px solid rgba(148, 163, 184, 0.14);
+  border-radius: 14px;
+  padding: 0.7rem 0.75rem;
+  font-size: 0.78rem;
+  color: #94a3b8;
+}
+
+.gc-hud b {
+  display: block;
+  color: #e2e8f0;
+  font-size: 0.95rem;
+  margin-top: 0.15rem;
+}
+
+.gc-section {
+  padding: 1.4rem 0 3.6rem;
+}
+
+.gc-section-head {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.gc-section-head .gc-h2 {
+  margin: 0.4rem 0 0.6rem;
+  font-size: clamp(1.7rem, 3vw, 2.4rem);
+}
+
+.gc-section-head p {
+  margin: 0 auto;
+  max-width: 40rem;
+  color: #9aa8c2;
+}
+
+.gc-flow {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.gc-flow-col {
+  border-radius: 22px;
+  padding: 1rem;
+  background: rgba(12, 16, 28, 0.72);
+  border: 1px solid rgba(148, 163, 184, 0.1);
+}
+
+.gc-flow-col .gc-h3 {
+  margin: 0 0 0.9rem;
+  font-size: 0.92rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.gc-node {
+  position: relative;
+  border-radius: 16px;
+  padding: 0.85rem 0.9rem 0.85rem 2.6rem;
+  margin-bottom: 0.7rem;
+  background: #101524;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.gc-node:last-child {
+  margin-bottom: 0;
+}
+
+.gc-node::before {
+  content: "";
+  position: absolute;
+  left: 0.95rem;
+  top: 1.15rem;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: currentColor;
+  box-shadow: 0 0 12px currentColor;
+}
+
+.gc-node strong {
+  display: block;
+  font-size: 0.94rem;
+}
+
+.gc-node small {
+  color: #93a0b8;
+  font-size: 0.78rem;
+}
+
+.gc-node-arrow {
+  text-align: center;
+  color: #64748b;
+  font-size: 0.85rem;
+  margin: -0.15rem 0 0.45rem;
+}
+
+.stage-access { color: #22d3ee; }
+.stage-access .gc-h3 { color: #22d3ee; }
+.stage-capture { color: #a78bfa; }
+.stage-capture .gc-h3 { color: #c4b5fd; }
+.stage-analyze { color: #38bdf8; }
+.stage-analyze .gc-h3 { color: #7dd3fc; }
+.stage-result { color: #a3e635; }
+.stage-result .gc-h3 { color: #bef264; }
+
+.gc-features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.gc-card {
+  border-radius: 22px;
+  padding: 1.35rem;
+  background: linear-gradient(180deg, rgba(18, 24, 40, 0.95), rgba(10, 13, 24, 0.92));
+  border: 1px solid rgba(148, 163, 184, 0.12);
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.gc-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(34, 211, 238, 0.4);
+  box-shadow: 0 16px 40px rgba(2, 6, 23, 0.35);
+}
+
+.gc-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+  margin-bottom: 0.9rem;
+  background: rgba(34, 211, 238, 0.12);
+}
+
+.gc-card .gc-h3 {
+  margin: 0 0 0.45rem;
+  font-size: 1.08rem;
+}
+
+.gc-card p {
+  margin: 0;
+  color: #9aa8c2;
+  font-size: 0.95rem;
+}
+
+.gc-cta {
+  border-radius: 28px;
+  padding: 2.6rem 2rem;
+  text-align: center;
+  background:
+    radial-gradient(500px 160px at 50% 0%, rgba(34, 211, 238, 0.18), transparent 70%),
+    linear-gradient(180deg, #12182a, #0b101c);
+  border: 1px solid rgba(34, 211, 238, 0.2);
+}
+
+.gc-cta .gc-h2 {
+  margin: 0 0 0.6rem;
+  font-size: clamp(1.6rem, 3vw, 2.3rem);
+}
+
+.gc-cta p {
+  color: #9aa8c2;
+  margin: 0 0 1.3rem;
+}
+
+.gc-footer {
+  margin-top: 2.4rem;
+  padding: 2rem 0 2.4rem;
+  border-top: 1px solid rgba(148, 163, 184, 0.12);
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 1.5rem;
+  color: #8b9bb3;
+  font-size: 0.92rem;
+}
+
+.gc-footer strong {
+  color: #e2e8f0;
+  display: block;
+  margin-bottom: 0.35rem;
+  font-size: 1rem;
+}
+
+.gc-footer-links {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
+.gc-footer a {
+  color: #cbd5e1;
+  text-decoration: none;
+}
+
+.gc-footer a:hover {
+  color: #22d3ee;
+}
+
+@media (max-width: 980px) {
+  .gc-hero-grid,
+  .gc-flow,
+  .gc-features,
+  .gc-footer {
+    grid-template-columns: 1fr;
+  }
+
+  .gc-footer-links {
+    justify-content: flex-start;
+  }
+
+  .gc-nav-toggle {
+    display: block;
+    appearance: none;
+    width: 42px;
+    height: 42px;
+    border: 1px solid rgba(148, 163, 184, 0.2);
+    border-radius: 12px;
+    background:
+      linear-gradient(#e2e8f0, #e2e8f0) center 14px / 18px 2px no-repeat,
+      linear-gradient(#e2e8f0, #e2e8f0) center 20px / 18px 2px no-repeat,
+      linear-gradient(#e2e8f0, #e2e8f0) center 26px / 18px 2px no-repeat,
+      rgba(15, 23, 42, 0.8);
+    cursor: pointer;
+  }
+
+  .gc-nav-links {
+    display: none;
+    position: absolute;
+    left: 1rem;
+    right: 1rem;
+    top: 72px;
+    padding: 1rem;
+    border-radius: 16px;
+    background: #101522;
+    border: 1px solid rgba(148, 163, 184, 0.14);
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .gc-nav-toggle:checked ~ .gc-nav-links {
+    display: flex;
+  }
+}
+
+@media (max-width: 640px) {
+  .gc-hero {
+    padding-top: 2.4rem;
+  }
+
+  .gc-hud {
+    grid-template-columns: 1fr;
+  }
+
+  .gc-visual,
+  .gc-visual svg {
+    min-height: 300px;
+    height: 300px;
+  }
+}

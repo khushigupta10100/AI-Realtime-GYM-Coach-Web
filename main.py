@@ -3,6 +3,7 @@ import os
 import time
 import pandas as pd
 from dotenv import load_dotenv
+from home_page import render_home_page
 from services.auth.login_wall import render_login_wall
 from services.state.session_defaults import initial_session_defaults
 from services.config.workout_config import EXERCISE_OPTIONS
@@ -26,10 +27,16 @@ def main():
         layout="centered"
     )
 
+    init_db()
+
+    # Home page is rendered in this same Streamlit process (the app on port 8505).
+    # It is skipped after Login/Get Started, and skipped when already authenticated.
+    if st.session_state.get("user_id") is None:
+        if not render_home_page():
+            return
+
     load_css(os.path.join(os.getcwd(), "static", "style.css"))
     inject_local_font(os.path.join(os.getcwd(), "static", "AdobeClean.otf"), "AdobeClean")
-
-    init_db()
 
     if not render_login_wall():
         return 
